@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Items - ReWear</title>
+    <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">♻️ ReWear</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Browse</a></li>
+                    <li><a href="sustainability.html">Impact</a></li>
+                </ul>
+                <div class="user-menu"></div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" style="margin: 2rem auto;">
+        <h1 style="margin-bottom: 0.25rem;">Browse <span class="text-gradient">Clothing Items</span></h1>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Discover sustainable fashion from our community</p>
+
+        <!-- Search -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for items...">
+            <button class="btn btn-primary" onclick="searchItems()">Search</button>
+        </div>
+
+        <!-- Filters Bento Row -->
+        <div class="bento-grid" style="margin-bottom: 2rem;">
+            <div class="card" style="padding: 1rem 1.25rem;">
+                <label for="filter-category" style="font-size: 0.8rem; margin-bottom: 0.4rem;">Category</label>
+                <select id="filter-category" onchange="applyFilters()">
+                    <option value="">All Categories</option>
+                    <option value="tops">Tops</option>
+                    <option value="bottoms">Bottoms</option>
+                    <option value="dresses">Dresses</option>
+                    <option value="outerwear">Outerwear</option>
+                    <option value="footwear">Footwear</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+            <div class="card" style="padding: 1rem 1.25rem;">
+                <label for="filter-condition" style="font-size: 0.8rem; margin-bottom: 0.4rem;">Condition</label>
+                <select id="filter-condition" onchange="applyFilters()">
+                    <option value="">All Conditions</option>
+                    <option value="new">New</option>
+                    <option value="like_new">Like New</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="worn">Worn</option>
+                </select>
+            </div>
+            <div class="card" style="padding: 1rem 1.25rem;">
+                <label for="filter-type" style="font-size: 0.8rem; margin-bottom: 0.4rem;">Transaction</label>
+                <select id="filter-type" onchange="applyFilters()">
+                    <option value="">All Types</option>
+                    <option value="rent">Rent</option>
+                    <option value="buy">Buy</option>
+                    <option value="exchange">Exchange</option>
+                    <option value="free">Free</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Items Grid -->
+        <div class="items-grid" id="items-container">
+            <!-- Loaded via JavaScript -->
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <!-- Item Details Modal -->
+    <div id="item-modal" class="modal">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2>Item Details</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Loaded via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReWear Clothing System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api-client.js?v=2"></script>
+    <script src="js/utils.js?v=2"></script>
+    <script src="js/browse.js?v=2"></script>
+</body>
+</html>

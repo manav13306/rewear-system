@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Impact - ReWear</title>
+    <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">♻️ ReWear</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse-items.html">Browse</a></li>
+                    <li><a href="#">Impact</a></li>
+                </ul>
+                <div class="user-menu"></div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero" style="padding: 6rem 0; background: radial-gradient(circle at center, rgba(46, 204, 113, 0.15) 0%, transparent 70%);">
+        <div class="container">
+            <h1 class="elite-title animate-float">Our Planet, <br><span class="text-glow" style="color: var(--accent-green);">Reimagined.</span></h1>
+            <p style="font-size: 1.4rem; opacity: 0.8; max-width: 700px; margin: 1.5rem auto;">Every garment shared is a step towards a sustainable future.</p>
+        </div>
+    </div>
+
+    <div class="container" style="margin: 4rem auto;">
+        <!-- Stats & Personal Info in Elite Bento -->
+        <div class="elite-bento" id="impact-grid">
+            <!-- Global & Personal stats will be injected here as elite-cards -->
+            <div class="elite-card bento-wide" id="global-headline">
+                <div class="elite-label">Global Achievement</div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;" id="global-items-count">...</h2>
+                <div style="color: var(--accent-green); font-weight: 700; letter-spacing: 0.1em;">ITEMS INVOLVED</div>
+            </div>
+            
+            <div class="elite-card" id="global-co2-card">
+                <div class="elite-label">CO₂ Reduced</div>
+                <h2 style="font-size: 2rem; color: #e74c3c;" id="global-co2-val">...</h2>
+                <div class="rank-badge-elite">🌍</div>
+            </div>
+
+            <div class="elite-card" id="global-water-card">
+                <div class="elite-label">Water Saved</div>
+                <h2 style="font-size: 2rem; color: #3498db;" id="global-water-val">...</h2>
+                <div class="rank-badge-elite">💧</div>
+            </div>
+
+            <!-- More cards injected via JS -->
+        </div>
+
+        <!-- Leaderboard Section -->
+        <div style="margin-top: 5rem;">
+            <h2 class="elite-label" style="text-align: center; font-size: 1.25rem; margin-bottom: 3rem;">Elite Eco-Champions</h2>
+            <div class="leaderboard-container elite-card" style="padding: 0;" id="leaderboard-container">
+                <!-- Leaderboard Table injected here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReWear Clothing System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Elite Mouse Tracking Script
+        document.addEventListener('mousemove', e => {
+            const cards = document.querySelectorAll('.elite-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+    <script src="js/api-client.js?v=5"></script>
+    <script src="js/utils.js?v=5"></script>
+    <script src="js/sustainability.js?v=5"></script>
+</body>
+</html>

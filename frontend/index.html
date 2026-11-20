@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWear - Sustainable Fashion Platform</title>
+    <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">♻️ ReWear</div>
+                <ul class="nav-menu">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="browse-items.html">Browse</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="user-menu"></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Wear Fashion,<br><span class="text-gradient">Save the Planet</span></h1>
+            <p>Join the sustainable fashion revolution. Reuse, rent, resell, and exchange clothing items while reducing your environmental footprint.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="browse-items.html" class="btn btn-lg btn-primary">Shop Now</a>
+                <a href="#features" class="btn btn-lg btn-secondary">How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Bento Grid -->
+    <section id="features" class="container" style="margin: 4rem auto;">
+        <h2 class="text-center mb-4">Why Choose <span class="text-gradient">ReWear</span>?</h2>
+        <div class="bento-grid" style="margin-top: 2rem;">
+            <div class="card feature-card">
+                <div class="feature-icon" style="background: var(--accent-green-dim);">♻️</div>
+                <h3>Sustainable</h3>
+                <p>Reduce textile waste, water usage, and carbon emissions with every transaction.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-icon" style="background: var(--accent-blue-dim);">💰</div>
+                <h3>Affordable</h3>
+                <p>Save money by renting or buying second-hand fashion items from other users.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-icon" style="background: var(--accent-purple-dim);">🌍</div>
+                <h3>Community</h3>
+                <p>Connect with eco-conscious individuals and build a sustainable fashion community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Statistics Section -->
+    <section id="impact" class="container" style="margin: 6rem auto;">
+        <div class="text-center mb-4">
+            <h2 style="font-size: 2.5rem;">Our Collective <span class="text-gradient">Impact</span></h2>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary);">Every swap, sale, and rental contributes to a healthier planet. Track our community's real-time progress below.</p>
+        </div>
+        
+        <div class="bento-4" style="margin-top: 3rem;">
+            <!-- Active Users -->
+            <div class="card bento-stat" style="border-top: 3px solid var(--accent-purple);">
+                <div class="stat-icon">👥</div>
+                <div class="stat-value" id="stat-users">0</div>
+                <div class="stat-label">Active Users</div>
+            </div>
+            
+            <!-- Items Listed -->
+            <div class="card bento-stat" style="border-top: 3px solid var(--accent-blue);">
+                <div class="stat-icon">👗</div>
+                <div class="stat-value" id="stat-items">0</div>
+                <div class="stat-label">Items Listed</div>
+            </div>
+            
+            <!-- CO2 Reduced -->
+            <div class="card bento-stat" style="border-top: 3px solid var(--accent-green);">
+                <div class="stat-icon">🌱</div>
+                <div class="stat-value" id="stat-co2">0 kg</div>
+                <div class="stat-label">CO₂ Reduced</div>
+            </div>
+            
+            <!-- Water Saved -->
+            <div class="card bento-stat" style="border-top: 3px solid var(--accent-emerald);">
+                <div class="stat-icon">💧</div>
+                <div class="stat-value" id="stat-water">0</div>
+                <div class="stat-label">Liters Saved</div>
+            </div>
+        </div>
+        
+        <!-- Impact Details Card (Summary) -->
+        <div class="card" id="global-impact" style="margin-top: 2.5rem; padding: 2.5rem; background: var(--bg-card-accent); text-align: center;">
+            <p style="color: var(--text-muted);">Fetching real-time environmental data...</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="container" style="margin: 4rem auto;">
+        <div class="card text-center" style="padding: 3.5rem 2rem;">
+            <h2>Ready to Make a <span class="text-gradient">Difference</span>?</h2>
+            <p id="cta-text" style="font-size: 1.1rem; max-width: 500px; margin: 1rem auto 2rem;">Join our community of eco-conscious fashion lovers today.</p>
+            <div id="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="login.html" class="btn btn-lg btn-primary">Login to Continue</a>
+                <a href="register.html" class="btn btn-lg btn-outline">Create Account</a>
+                <a href="browse-items.html" class="btn btn-lg btn-secondary">Browse Items</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container" style="margin: 4rem auto;">
+        <div class="bento-grid">
+            <div class="card bento-wide" style="padding: 2.5rem;">
+                <h2>About <span class="text-gradient">ReWear</span></h2>
+                <p>ReWear is a sustainable fashion platform dedicated to reducing textile waste and promoting circular economy principles. Our mission is to make sustainable fashion accessible and affordable for everyone.</p>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.3rem;">✓</span>
+                        <span style="color: var(--text-secondary);">Rent clothing items instead of buying new</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.3rem;">✓</span>
+                        <span style="color: var(--text-secondary);">Resell items you no longer wear</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.3rem;">✓</span>
+                        <span style="color: var(--text-secondary);">Exchange clothes with community members</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.3rem;">✓</span>
+                        <span style="color: var(--text-secondary);">Track your personal environmental impact</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card bento-stat" style="background: var(--bg-card-accent);">
+                <div class="stat-icon">🌿</div>
+                <div class="stat-value">3 kg</div>
+                <div class="stat-label">CO₂ per item</div>
+                <p style="font-size: 0.85rem; margin-top: 1rem; margin-bottom: 0;">Each item reworn prevents an average of 3 kg of CO₂ emissions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About ReWear</h4>
+                    <p style="font-size: 0.9rem;">Promoting sustainable fashion through circular economy and community-driven initiatives.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="browse-items.html">Browse Items</a></li>
+                        <li><a href="#impact">Impact</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReWear Clothing System. All rights reserved. | Promoting Sustainable Fashion</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api-client.js?v=3"></script>
+    <script src="js/utils.js?v=3"></script>
+    <script src="js/index.js?v=3"></script>
+</body>
+</html>
